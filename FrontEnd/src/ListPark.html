@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/HomeB.css" rel="stylesheet">
+    <script type="module" src="js/ListPark.js"></script>
+</head>
+<body>
+<div class="fixed top-0">
+    <div class="flex justify-around bg-gradient-to-r from-white via-green-500 to-blue-500 shadow-lg w-screen">
+        <img class="h-10" src="img/placehold_logo.png">
+        <a href="/" class="text-white text-3xl">Home</a>
+        <a href="ListPark.html" class="text-white text-3xl">List</a>
+        <a href="" class="text-white text-3xl">About</a>
+        <input class="border border-transparent rounded-md shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-gray-400" placeholder="Search for National park">
+    </div>
+</div>
+<div class="flex flex-col mt-16">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-7">
+        <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+                <table class="min-w-full">
+                    <thead class="border-b">
+                    <tr>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left truncate">
+                            ID
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                            ParkName
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                            <div class="dropdown th_region">
+                                Region
+<!--                                <div class="dropdown-content">-->
+<!--                                    <a>North</a>-->
+<!--                                    <a>South</a>-->
+<!--                                    <a>West</a>-->
+<!--                                    <a>East</a>-->
+<!--                                    <a>NorthEast</a>-->
+<!--                                    <a>Middle</a>-->
+<!--                                </div>-->
+                            </div>
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                            Province
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody id="ParkTable">
+                    <tr class="border-b">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            error
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            cannot fetch
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

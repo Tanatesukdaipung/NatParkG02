@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  api:
+    build: ./Backend
+    #only dir in here
+    ports:
+      - 448:448

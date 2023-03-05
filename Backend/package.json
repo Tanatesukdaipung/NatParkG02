@@ -1,0 +1,29 @@
+{
+  "name": "national-park-guide",
+  "version": "0.0.1",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html --open",
+    "tailwind": "npx tailwindcss -i ./css/main.css -o ./dist/output.css --watch",
+    "BackendBuilt": "parcel build Backend/addparkpage.html",
+    "Backenddev": "parcel Backend/addparkpage.html --open",
+    "start": "npm run build && npm run dev",
+    "startBE": "npm run BackendBuilt && npm run Backenddev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "GraphQL": "node .\\Backend\\Ql.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.3.1",
+    "@google-cloud/storage": "^6.9.1",
+    "graphql": "^16.6.0"
+  },
+  "main": "tailwind.config.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "description": ""
+}

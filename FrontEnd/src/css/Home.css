@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+polygon {
+    color: #3b82f6;
+    opacity: 0%;
+    transition: 0.3s;
+}
+polygon:hover{
+    opacity: 0.2;
+}
+
+.parkinfo:hover{
+    background: #999999;
+}

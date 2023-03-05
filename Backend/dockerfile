@@ -1,0 +1,10 @@
+FROM node:alpine
+COPY Ql.js Ql.js
+COPY key.json key.json
+COPY package.json package.json
+EXPOSE 448/tcp
+EXPOSE 448/udp
+RUN npm install python
+RUN npm install
+CMD node Ql.js
+
