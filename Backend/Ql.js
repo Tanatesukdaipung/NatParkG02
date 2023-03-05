@@ -170,7 +170,7 @@ startserver().then(() => {
     }),
   );
 })
-// console.log(`🚀 Server ready at http://localhost:448/graphql`);
+console.log(`🚀 Server ready at http://localhost:448/graphql`);
 
 // const server = new ApolloServer({
 //   typeDefs,

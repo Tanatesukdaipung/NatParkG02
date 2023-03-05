@@ -5,3 +5,7 @@ services:
     #only dir in here
     ports:
       - 448:448
+  web:
+    build: ./Frontend
+    ports:
+      - 8080:80
