@@ -78,7 +78,7 @@ function handler_parkname(event) {
     let ParkUrl = new URLSearchParams()
     console.log(event.target.parentElement.childNodes[1].textContent)
         ParkUrl.append("ParkName", event.target.parentElement.childNodes[1].textContent)
-        let Url = "/ParkInfo.html?" + ParkUrl.toString()
+        let Url = "ParkInfo.html?" + ParkUrl.toString()
         location.href = Url;
         window.open(Url);
         console.log(Url)
