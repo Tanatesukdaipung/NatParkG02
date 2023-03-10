@@ -69,7 +69,32 @@ window.onload = function (event){
   console.log(params.get("ParkName"))
   fetchPark(params.get("ParkName"), null, null).then(function (item){
     if(item.data.park.length === 0){
-      console.log("fetch error")
+      fetchPark(params.get("ParkName")+"\r\n", null, null).then(function (item){
+        if(item.data.park.length === 0){
+          console.log("fetch error")
+        }else{
+          let park = item.data.park[0]
+          list_element.forEach((item)=>{
+            console.log(park)
+            let element = document.getElementById(item);
+            if(park[item] == null || park[item] === ""){
+              element.textContent = "Not Found"
+            }else{
+              element.textContent = park[item]
+            }
+          })
+          park["photo10maximum"].split(",").forEach((item)=>{
+            let img_id = item.split("/")[3].slice(8)
+            let element = document.getElementById("img")
+            let img_ele = document.createElement("img")
+            img_ele.className = "w-1/5 h-56 mt-8 mb-8"
+            img_ele.src = src_header + img_id
+            element.appendChild(img_ele)
+            console.log(item.split("/")[3].slice(8))
+          })
+        }
+      })
+
     }else {
       let park = item.data.park[0]
       list_element.forEach((item)=>{
@@ -85,7 +110,7 @@ window.onload = function (event){
         let img_id = item.split("/")[3].slice(8)
         let element = document.getElementById("img")
         let img_ele = document.createElement("img")
-        img_ele.className = "w-1/5 h-56"
+        img_ele.className = "w-1/5 h-56 mt-8 mb-8"
         img_ele.src = src_header + img_id
         element.appendChild(img_ele)
         console.log(item.split("/")[3].slice(8))

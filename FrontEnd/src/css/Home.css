@@ -14,3 +14,18 @@ polygon:hover{
 .parkinfo:hover{
     background: #999999;
 }
+@font-face{
+    /*background-color: #f0ff91;*/
+    font-family: Itmi;
+    src: url("./Font/Itim-Regular.ttf");
+}
+body{
+    font-family: Itmi;
+}
+.description{
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.hoverdes:hover + .description{
+    opacity: 1;
+}

@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title class="title"></title>
+    <title class="title">National Park Guide</title>
+    <link href="css/Home.css" rel="stylesheet">
     <link href="css/HomeB.css" rel="stylesheet">
+    <link href="css/ParkInfo.css" rel="stylesheet">
+
     <script type="module" src="js/ParkInfo.js"></script>
 </head>
-<body>
+<body class="bg-cover h-screen">
 <div>
   <div class="mx-auto h-full w-full">
     <div class="fixed top-0">
@@ -14,14 +17,14 @@
         <img class="h-10" src="img/placehold_logo.png">
         <a href="/" class="text-white text-3xl">Home</a>
         <a href="ListPark.html" class="text-white text-3xl">List</a>
-        <a href="" class="text-white text-3xl">About</a>
+        <a href="About.html" class="text-white text-3xl">About</a>
         <input class="border border-transparent rounded-md shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-gray-400" placeholder="Search for National park">
       </div>
     </div>
   </div>
   <div class="mx-auto w-screen h-1/6 mt-8">
     <div>
-        <div class="ml-8 mt-12 mb-8">
+        <div class="ml-8 mt-12 mb-2">
             <h1 class="text-3xl" id="parkname">ParkName</h1>
         </div>
         <div class="text-center">
@@ -33,11 +36,11 @@
         </div>
 
         <label class="ml-8 text-2xl">กิจกรรมที่ไม่ควรพลาด</label>
-        <div class="text-center">
+        <div class="ml-32">
             <a id="activity" class=""></a>
         </div>
         <label class="ml-8 text-3xl">ข้อมูลอื่นๆที่ควรรู้</label>
-        <div class="">
+        <div class="mt-8">
             <label class="ml-8 text-2xl">ที่ตั้ง</label>
             <a id="location" class=""></a>
         </div>

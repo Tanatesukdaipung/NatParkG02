@@ -161,6 +161,33 @@ document.getElementById("poly_south").onclick = function (){
     let popup = document.getElementById("info_popup")
     popup.style.display = ""
 }
+
+document.getElementById("poly_west").onclick = function (){
+    document.getElementById("info_list").innerHTML = ""
+    let img_element = document.getElementById("info_popup_img")
+    img_element.src = list_map_img.west
+    document.getElementById("region_name").textContent = "ภาคตะวันตก"
+    list_west.forEach((item, index)=>{
+        let list_element = document.createElement("li")
+        item.forEach((item, index)=>{
+            let province_element = document.createElement("p")
+            let park_element = document.createElement("button")
+            if(index === 0){
+                province_element.className = "ml-4"
+                province_element.textContent = item
+            }else{
+                park_element.className = "ParkName"
+                park_element.textContent = item
+            }
+            list_element.appendChild(park_element)
+            list_element.appendChild(province_element)
+        })
+        document.getElementById("info_list").appendChild(list_element)
+
+    })
+    let popup = document.getElementById("info_popup")
+    popup.style.display = ""
+}
 document.getElementById("info_popup_close").onclick = function (){
     let popup = document.getElementById("info_popup")
     popup.style.display = "none"
@@ -175,8 +202,8 @@ window.onclick = function (event) {
         console.log(Url)
     }
 }
-const list_north = [["จังหวัดกำแพงเพชร","อุทยานแห่งชาติคลองลาน"], ["จังหวัดเชียงใหม่", "อุทยานแห่งชาติดอยอินทนนท์", "อุทยานแห่งชาติเชียงดาว"], ["จังหวัดตาก", "อุทยานแห่งชาติแม่เมย"], ["จังหวัดสุโขทัย","อุทยานแห่งชาติศรีสัชนาลัย"]]
-const list_west = [["จังหวัดกาญจนบุรี", "อุทยานแห่งชาติลำคลองงู", "อุทยานแห่งชาติเฉลิมรัตนโกสินทร์"], ["จังหวัดประจวบคีรีขันธ์", "อุทยานแห่งชาติเขาสามร้อยยอด"],["จังหวัดเพชรบุรี", "อุทยานแห่งชาติแก่งกระจาน"], ["จังหวัดราชบุรี", "อุทยานแห่งชาติเฉลิมพระเกียรติไทยประจัน"]]
+const list_north = [["จังหวัดกำแพงเพชร","อุทยานแห่งชาติคลองลาน (Khlong Lan)"], ["จังหวัดเชียงใหม่", "อุทยานแห่งชาติดอยอินทนนท์", "อุทยานแห่งชาติเชียงดาว (Chiang Dow)"], ["จังหวัดตาก", "อุทยานแห่งชาติแม่เมย (Mae Moei)"], ["จังหวัดสุโขทัย","อุทยานแห่งชาติศรีสัชนาลัย (Si Satchanalai)"]]
+const list_west = [["จังหวัดกาญจนบุรี", "อุทยานแห่งชาติลำคลองงู (Lam Klong Ngu)", "อุทยานแห่งชาติเฉลิมรัตนโกสินทร์ (Chaloem Rattanakosin)"], ["จังหวัดประจวบคีรีขันธ์", "อุทยานแห่งชาติเขาสามร้อยยอด (Khao Sam Roi Yot)"],["จังหวัดเพชรบุรี", "อุทยานแห่งชาติแก่งกระจาน (Kaeng Krachan)"], ["จังหวัดราชบุรี", "อุทยานแห่งชาติเฉลิมพระเกียรติไทยประจัน (Chaloem Phra Kiat Thai Prachan)"]]
 const list_middle = [["จังหวัดสระบุรี", "อุทยานแห่งชาติน้ำตกเจ็ดสาวน้อย (Namtok Chet Sao Noi)", "อุทยานแห่งชาติน้ำตกสามหลั่น (Namtok Sam Lan)"],["จังหวัดสุพรรณบุรี", "อุทยานแห่งชาติพุเตย (Phu Toei)"]]
 const list_east = [["จังหวัดจันทบุรี", "อุทยานแห่งชาติเขาคิชฌกูฏ (Khao Khitchakut)", "อุทยานแห่งชาติเขาสิบห้าชั้น (Khao Sip Ha Chan)", "อุทยานแห่งชาติน้ำตกพลิ้ว (Namtok Phlio)"],["จังหวัดตราด", "อุทยานแห่งชาติน้ำตกคลองแก้ว (Namtok Khlong Kaeo)", "อุทยานแห่งชาติหมู่เกาะช้าง (Mu Ko Chang)"], ["จังหวัดระยอง", "อุทยานแห่งชาติเขาชะเมา - เขาวง (Khao Chamao - Khao Wong)", "อุทยานแห่งชาติเขาแหลมหญ้า-หมู่เกาะเสม็ด (Khao Leam Ya - Mu Ko Samet)"]]
 const list_map_img = {"middle": "img/ภาคกลาง.jpg", "north":"img/ภาคเหนือ.jpg", "south":"img/ภาคใต้.jpg", "ne":"img/ภาคอีสาน_ตะวันออกเฉียงเหนือ.jpg", "west":"img/ภาคตะวันตก.jpg", "east":"img/ภาคตะวันออก.jpg"}
