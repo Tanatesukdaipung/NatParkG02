@@ -102,28 +102,3 @@ window.onclick = function (event) {
         console.log(Url)
     }
 }
-
-document.getElementById("ParkSearch").onkeyup = function (){
-    fetchPark(null, null, null).then((json)=>{
-        let input, ul, li , park_list, count
-        park_list = json.data.park
-        input = document.getElementById("ParkSearch").value
-        let list_html = document.getElementById("SearchList")
-        list_html.innerHTML = ''
-        // console.log(park_list[0])
-        count = 0
-        for(let i=0; i < park_list.length && count < 5; i++){
-            park_name = park_list[i].parkname
-            if(park_name.trim().indexOf(input) > -1){
-                count++
-                let tr_add = document.createElement("li")
-                tr_add.className = "bg-white hover:bg-neutral-100"
-                let bt_add = document.createElement("button")
-                bt_add.className = "ParkName m-28"
-                bt_add.innerHTML = park_name
-                tr_add.appendChild(bt_add)
-                list_html.appendChild(tr_add)
-            }
-        }
-    })
-}
