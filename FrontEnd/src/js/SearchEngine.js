@@ -65,7 +65,7 @@ document.getElementById("ParkSearch").onkeyup = function (){
         // console.log(park_list[0])
         count = 0
         for(let i=0; i < park_list.length && count < 5 && input.length > 0; i++){
-            park_name = park_list[i].parkname
+            let park_name = park_list[i].parkname
             if(park_name.trim().indexOf(input) > -1){
                 count++
                 let tr_add = document.createElement("li")
