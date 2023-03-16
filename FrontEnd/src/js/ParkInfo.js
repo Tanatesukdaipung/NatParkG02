@@ -22,6 +22,7 @@ const graphqlQuery = {
    location
    description
    activity
+   youtube
   }
 }`,
   "variables": {}
@@ -61,17 +62,17 @@ function fetchPark(parkname, province, region){
     return response.json()
   })
 }
-const list_element = ["parkname", "activity", "location", "pricethai", "priceinternational", "time", "tel", "description"]
+const list_element = ["parkname", "activity", "location", "pricethai", "priceinternational", "time", "tel", "description", "youtube"]
 const list_key = ["activity", "location", "pricethai", "priceinternational", "time", "tel"]
 
 window.onload = function (event){
   let params = new URLSearchParams(window.location.search)
-  console.log(params.get("ParkName"))
+  // console.log(params.get("ParkName") + "\\r\\n")
   fetchPark(params.get("ParkName"), null, null).then(function (item){
     if(item.data.park.length === 0){
-      fetchPark(params.get("ParkName")+"\r\n", null, null).then(function (item){
+      fetchPark(params.get("ParkName") +"\\r\\n", null, null).then(function (item){
         if(item.data.park.length === 0){
-          console.log("fetch error")
+          console.log("fetch error 2")
         }else{
           let park = item.data.park[0]
           list_element.forEach((item)=>{
@@ -90,7 +91,7 @@ window.onload = function (event){
             img_ele.className = "w-1/5 h-56 mt-8 mb-8"
             img_ele.src = src_header + img_id
             element.appendChild(img_ele)
-            console.log(item.split("/")[3].slice(8))
+            // console.log(item.split("/")[3].slice(8))
           })
         }
       })
@@ -98,8 +99,20 @@ window.onload = function (event){
     }else {
       let park = item.data.park[0]
       list_element.forEach((item)=>{
-        console.log(park)
+        // console.log(park)
         let element = document.getElementById(item);
+        let yt_id = ""
+        if(item === "youtube"){
+          if(park.youtube != null){
+            // console.log(park.youtube.split("/")[3])
+            yt_id = park.youtube.split("/")[3]
+            if(park.youtube.split("/")[3].indexOf("watch") > -1){
+              yt_id = park.youtube.split("/")[3].slice(8)
+            }
+            element.src = "https://www.youtube.com/embed/" + yt_id
+            element.style.display = "block"
+          }
+        }
         if(park[item] == null || park[item] === ""){
           element.textContent = "Not Found"
         }else{
@@ -113,7 +126,7 @@ window.onload = function (event){
         img_ele.className = "w-1/5 h-56 mt-8 mb-8"
         img_ele.src = src_header + img_id
         element.appendChild(img_ele)
-        console.log(item.split("/")[3].slice(8))
+        // console.log(item.split("/")[3].slice(8))
       })
     }
       }

@@ -3,7 +3,7 @@ const headers = {
     "content-type": "application/json",
     "Authorization": "<token>"
 };
-const image_url_drive = "https://drive.google.com/drive/folders/11M21L4O82rHt_0_JePbsS0jfQKJeI6LBf--GYoT-jbCFymhO_cQY2FiXanJe7CgBTjaVilnb?usp=sharing"
+// const image_url_drive = "https://drive.google.com/drive/folders/11M21L4O82rHt_0_JePbsS0jfQKJeI6LBf--GYoT-jbCFymhO_cQY2FiXanJe7CgBTjaVilnb?usp=sharing"
 
 const graphqlQuery = {
     "operationName": "Query",

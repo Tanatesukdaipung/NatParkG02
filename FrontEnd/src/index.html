@@ -8,10 +8,12 @@
 <!--    <link href="https://fonts.google.com/specimen/Itim?query=itim" rel="stylesheet">-->
     <script type="module" src="js/Home.js"></script>
 </head>
-<body>
+<body class="index_bg">
 <h1 class="text-3xl font-bold underline">
     Hello world!
 </h1>
+
+<!--<img src="img/ภาคตะวันออก.jpg" class="h-0" >-->
 <a href="ParkInfo.html"></a>
 <div class="mx-auto h-full w-full">
     <div class="fixed top-0">
@@ -20,23 +22,33 @@
             <a href="/" class="text-white text-3xl">Home</a>
             <a href="ListPark.html" class="text-white text-3xl">List</a>
             <a href="About.html" class="text-white text-3xl">About</a>
-            <input class="border border-transparent rounded-md shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-gray-400" placeholder="Search for National park">
+<!--            <input class="border border-transparent rounded-md shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-gray-400" placeholder="Search for National park">-->
+            <div class="flex items-center">
+                <div class="relative w-full">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <input type="text" id="ParkSearch" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required>
+                    <ul class="fixed" id="SearchList">
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="mx-auto fixed h-full w-screen " style="display: none" id="info_popup">
+    <div class="mx-auto fixed h-full w-screen" style="display: none" id="info_popup">
         <div class="flex flex-row mx-auto mt-12 h-5/6 w-1/2 bg-white rounded-md shadow-lg border">
             <button id="info_popup_close" class="ml-4 mt-6 fixed h-4 w-4"><img src="img/close.png"></button>
-            <img src="img/ภาคตะวันออก.jpg" class="w1/2 mt-12 ml-8 h-3/4" id="info_popup_img">
-            <div class="mx-auto mt-12 h-5/6 w-full mr-8 rounded-md border border-4 border-green-400 bg-gray-200">
+            <img src="img/ภาคตะวันออก.jpg" class="w1/2 mt-12 ml-8 h-3/4 info_img" id="info_popup_img">
+            <div class="mx-auto mt-12 h-5/6 w-full mr-8 rounded-md border border-4 border-green-400 popup_img" id="bg_info">
                 <p class="text-center" id="region_name"> ภาคกลาง </p>
-                <ul class="list-disc list-inside" id="info_list">
+                <ul class="" id="info_list">
                 </ul>
             </div>
         </div>
     </div>
     <div>
-        <h1 class="hoverdes mt-6 ml-8 text-3xl">แนะนำเว็บไซต์</h1>
-        <p class="description mt-6 ml-8">
+        <h1 class="hoverdes mt-6 ml-8 text-3xl text-center">ข้อมูลท่องเที่ยวอุทยานแห่งชาติ</h1>
+        <p class="description mt-6 ml-8 text-center">
             เว็บไซต์นี้เป็นเว็บไซต์ให้การแนะนำข้อมูลเกี่ยวกับอุทยานแห่งชาติที่มีในประเทศไทย ซึ่งจะบ่งบอกถึงลักษณะภูมิประเทศที่ตั้ง พืชพรรณฯ(รวมถึงพืชน้ำ) สัตว์ป่า(รวมถึงสัตว์ป่าสงวน) ฤดูกาล รวมถึงการบริการภายในอุทยาน และ จัดทำขึ้นเพื่อการศึกษาค้นคว้า ในรายวิชา INT3704 โครงงานเทคโนโลยีสารสนเทศ
         </p>
     </div>

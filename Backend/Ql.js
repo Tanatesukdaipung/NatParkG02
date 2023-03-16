@@ -46,6 +46,7 @@ const typeDefs = `#graphql
     priceinternational: String
     time: String
     tel: String
+    Youtube: String
   }
   type AddData{
     status : Int!
