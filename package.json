@@ -7,8 +7,8 @@
     "doc": "doc"
   },
   "scripts": {
-    "start": "parcel FrontEnd/src/index.html",
-    "css": "npx tailwindcss -i FrontEnd/src/css/Home.css -o ./src/css/HomeB.css --watch"
+    "start": "parcel docs/index.html",
+    "css": "npx tailwindcss -i docs/css/Home.css -o ./docs/css/HomeB.css --watch"
   },
   "keywords": [],
   "author": "",

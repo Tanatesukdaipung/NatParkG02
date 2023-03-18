@@ -1,0 +1,8 @@
+FROM httpd:2.4
+COPY css /usr/local/apache2/htdocs/css/
+COPY img /usr/local/apache2/htdocs/img/
+COPY js /usr/local/apache2/htdocs/js/
+COPY About.html /usr/local/apache2/htdocs/
+COPY index.html /usr/local/apache2/htdocs/
+COPY ListPark.html /usr/local/apache2/htdocs/
+COPY ParkInfo.html /usr/local/apache2/htdocs/

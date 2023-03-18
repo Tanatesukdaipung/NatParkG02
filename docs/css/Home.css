@@ -43,3 +43,11 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.info_text{
+    font-size: larger;
+}
+
+.parkinfobg{
+    background-image: linear-gradient(to right, #E9FFC7, #00FF3C);
+}
