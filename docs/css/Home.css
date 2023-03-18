@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+polygon {
+    color: #3b82f6;
+    opacity: 0%;
+    transition: 0.3s;
+}
+polygon:hover{
+    opacity: 0.2;
+}
+
+.parkinfo:hover{
+    background: #999999;
+}
+@font-face{
+    /*background-color: #f0ff91;*/
+    font-family: Itmi;
+    src: url("./Font/Itim-Regular.ttf");
+}
+body{
+    font-family: Itmi;
+}
+
+
+.index_bg{
+    background-image: url("../img/bg_index.png");
+    /*backdrop-filter: brightness(150%) contrast(30%);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hoverdes:hover + .description {
+    opacity: 1;
+}
+
+.white_bg{
+    position: absolute;
+    right: 36%;
+    margin-top: 3%;
+}
+.popup_img{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
