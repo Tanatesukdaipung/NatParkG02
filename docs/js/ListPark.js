@@ -55,17 +55,21 @@ function update(json){
         ParkTable.innerHTML = ''
         Park = json.data.park
         Park.forEach(function (item, index){
+            let color = "text-gray-900"
             const tr_add = document.createElement("tr")
             tr_add.className = "border-b parkinfo"
             tr_add.addEventListener("click", handler_parkname)
             const td_add = document.createElement("td")
-            td_add.className = "px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 ParkName"
+            if(index >= 103){
+                color = "text-white"
+            }
+            td_add.className = "px-6 py-4 whitespace-nowrap text-sm font-medium ParkName " + color
             td_add.textContent = index.toString()
             td_add.id = "Park" + index
             tr_add.appendChild(td_add)
             for(let i = 0; i<5; i++){
                 const td_data_add = document.createElement("td")
-                td_data_add.className = "text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap truncate"
+                td_data_add.className = "text-sm font-light px-6 py-4 whitespace-nowrap truncate " + color
                 td_data_add.textContent = item[list_data[i]]
                 tr_add.appendChild(td_data_add)
             }

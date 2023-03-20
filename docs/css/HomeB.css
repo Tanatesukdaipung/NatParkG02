@@ -627,6 +627,10 @@ video {
   height: 1rem;
 }
 
+.h-4\/5 {
+  height: 80%;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -653,6 +657,10 @@ video {
 
 .w-1\/5 {
   width: 20%;
+}
+
+.w-3\/5 {
+  width: 60%;
 }
 
 .w-4 {
@@ -747,11 +755,6 @@ video {
   border-color: transparent;
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-gray-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
@@ -760,11 +763,6 @@ video {
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -784,10 +782,6 @@ video {
 
 .to-blue-500 {
   --tw-gradient-to: #3b82f6;
-}
-
-.bg-cover {
-  background-size: cover;
 }
 
 .p-2 {
@@ -935,6 +929,18 @@ body{
 
 .parkinfobg{
   background-image: linear-gradient(to right, #E9FFC7, #00FF3C);
+}
+
+.ParkName:hover{
+  background-color: #999999;
+}
+
+.default_bg {
+  background-image: url("../img/bg_index/default_bg.png");
+  /*backdrop-filter: brightness(150%) contrast(100%);*/
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .focus\:border-blue-500:focus {

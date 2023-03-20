@@ -52,10 +52,14 @@ function fetchPark(park_name, province, region){
     })
 }
 
-async function update_popup(list_input, img, text, color = ""){
+async function update_popup(list_input, img, text, color = "", background = ""){
     document.getElementById("info_list").innerHTML = ""
     let img_element = document.getElementById("info_popup_img")
     img_element.src = list_map_img[img]
+    let info_popup_img = document.getElementById("info_popup_bg")
+    info_popup_img.style.backgroundImage = background
+    info_popup_img.style.backgroundRepeat = "no-repeat"
+    info_popup_img.style.backgroundSize = "cover"
     document.getElementById("region_name").textContent = text
     list_input.forEach((item, index)=>{
         let list_element = document.createElement("li")
@@ -67,7 +71,7 @@ async function update_popup(list_input, img, text, color = ""){
                 list_element.appendChild(province_element)
             }else{
                 let park_element = document.createElement("button")
-                park_element.className = "ParkName ml-4 hover:underline"
+                park_element.className = "ParkName ml-4"
                 park_element.textContent = item
                 list_element.appendChild(park_element)
             }
@@ -80,12 +84,12 @@ async function update_popup(list_input, img, text, color = ""){
     popup.style.display = ""
 }
 
-document.getElementById("poly_middle").onclick = function () {update_popup(list_middle, "middle", "ภาคกลาง", "#e0dfb6")}
-document.getElementById("poly_north").onclick = function () {update_popup(list_north, "north", "ภาคเหนือ", "#dabbd8")}
-document.getElementById("poly_south").onclick = function () {update_popup(list_south, "south", "ภาคใต้", "#badbdb")}
-document.getElementById("poly_east").onclick = function () {update_popup(list_east, "east", "ภาคตะวันออก", "#ced7bf")}
-document.getElementById("poly_west").onclick = function () {update_popup(list_west, "west", "ภาคตะวันตก", "#bebed7")}
-document.getElementById("poly_ne").onclick = function () {update_popup(list_ne, "ne", "ภาคตะวันออกเฉียงเหนือ", "#ded3b8")}
+document.getElementById("poly_middle").onclick = function () {update_popup(list_middle, "middle", "ภาคกลาง", "#e0dfb6", "url('img/bg_index/ภาคกลาง.png')")}
+document.getElementById("poly_north").onclick = function () {update_popup(list_north, "north", "ภาคเหนือ", "#dabbd8", "url('img/bg_index/ภาคเหนือ.png')")}
+document.getElementById("poly_south").onclick = function () {update_popup(list_south, "south", "ภาคใต้", "#badbdb", "url('img/bg_index/ภาคใต้.png')")}
+document.getElementById("poly_east").onclick = function () {update_popup(list_east, "east", "ภาคตะวันออก", "#ced7bf", "url('img/bg_index/ภาคตะวันออก.png')")}
+document.getElementById("poly_west").onclick = function () {update_popup(list_west, "west", "ภาคตะวันตก", "#bebed7", "url('img/bg_index/ภาคตะวันตก.png')")}
+document.getElementById("poly_ne").onclick = function () {update_popup(list_ne, "ne", "ภาคตะวันออกเฉียงเหนือ", "#ded3b8", "url('img/bg_index/ภาคตะวันออกเฉียงเหนือ.png')")}
 
 document.getElementById("info_popup_close").onclick = function (){
     let popup = document.getElementById("info_popup")

@@ -51,3 +51,15 @@ body{
 .parkinfobg{
     background-image: linear-gradient(to right, #E9FFC7, #00FF3C);
 }
+
+.ParkName:hover{
+    background-color: #999999;
+}
+
+.default_bg {
+    background-image: url("../img/bg_index/default_bg.png");
+    /*backdrop-filter: brightness(150%) contrast(100%);*/
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
