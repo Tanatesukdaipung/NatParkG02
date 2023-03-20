@@ -60,7 +60,7 @@ function update(json){
             tr_add.className = "border-b parkinfo"
             tr_add.addEventListener("click", handler_parkname)
             const td_add = document.createElement("td")
-            if(index >= 103){
+            if(index >= 2000){
                 color = "text-white"
             }
             td_add.className = "px-6 py-4 whitespace-nowrap text-sm font-medium ParkName " + color
